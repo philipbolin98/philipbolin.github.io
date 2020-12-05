@@ -1,0 +1,43 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	text-align: center;
+	background-color: Silver;
+}
+
+header{
+	top: 0;
+	width: 100%;
+	position: fixed;
+}
+
+nav ul, footer ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: SkyBlue;
+}
+
+li{
+	display: inline-block;
+	margin: 1em;
+}
+
+nav a{
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.logo{
+	width: 40px;
+	height: 40px;
+}
+
+.skills img{
+	width: 40px;
+	height: 40px;
+}
