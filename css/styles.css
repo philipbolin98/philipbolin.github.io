@@ -15,14 +15,18 @@ header{
 	position: fixed;
 }
 
-nav ul, footer ul{
+ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+}
+
+nav ul, footer ul{
 	background-color: SkyBlue;
 }
 
-li{
+nav li, footer li{
 	display: inline-block;
 	margin: 1em;
 }
@@ -32,12 +36,37 @@ nav a{
 	text-transform: uppercase;
 }
 
-.logo{
-	width: 40px;
-	height: 40px;
+#home{
+	margin-top: 70px;
 }
 
-.skills img{
+#skills li{
+	width: 100px;
+	height: 100px;
+	background-color: GhostWhite;
+	display: inline-block;
+	margin: 10px;
+}
+
+#skills figure{
+	margin: 15px auto;
+	width: 70%;
+	height: 70%;
+}
+
+#skills figcaption{
+	padding: 5px 0px;
+}
+
+/* #education{
+	background-color: Linen;
+}
+
+#skills{
+	background-color: LightGreen;
+} */
+
+.logo{
 	width: 40px;
 	height: 40px;
 }
