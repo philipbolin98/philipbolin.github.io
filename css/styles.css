@@ -7,12 +7,18 @@ body{
 	margin: 0;
 	text-align: center;
 	background-color: Silver;
+	font-family: "Courier New", monospace;
 }
 
 header{
 	top: 0;
 	width: 100%;
 	position: fixed;
+	background-color: SkyBlue;
+}
+
+footer{
+	background-color: SkyBlue;
 }
 
 ul{
@@ -20,10 +26,6 @@ ul{
 	padding: 0;
 	list-style: none;
 
-}
-
-nav ul, footer ul{
-	background-color: SkyBlue;
 }
 
 nav li, footer li{
@@ -36,37 +38,71 @@ nav a{
 	text-transform: uppercase;
 }
 
-#home{
-	margin-top: 70px;
+.flexbox-container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
-#skills li{
-	width: 100px;
-	height: 100px;
-	background-color: GhostWhite;
-	display: inline-block;
-	margin: 10px;
+.flexbox-container img{
+	margin-left: 0;
+}
+
+.iconlist{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#home{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#education{
+	padding: 100px 0;
+	background-color: pink;
+}
+
+#skills{
+	padding: 100px 0;
+	background-color: lightgreen;
+}
+
+#projects{
+	padding: 100px 0;
+	background-color: lightsalmon;
 }
 
 #skills figure{
-	margin: 15px auto;
-	width: 70%;
-	height: 70%;
+	width: 110px;
+	height: 110px;
+	background-color: GhostWhite;
+	border-style: outset;
+	border-width: medium;
+	margin: 10px;
+}
+
+#skills img{
+	margin-top: 11px;
 }
 
 #skills figcaption{
 	padding: 5px 0px;
 }
 
-/* #education{
-	background-color: Linen;
+#skills .icon{
+	width: 50px;
+	height: 50px;
 }
 
-#skills{
-	background-color: LightGreen;
-} */
+footer .icon{
+	width: 30px;
+	height: 30px;
+}
 
-.logo{
-	width: 40px;
-	height: 40px;
+#skills figure:hover{
+	background-color: grey;
 }
