@@ -9,7 +9,8 @@
 </head>
 
 <body>
-<div class="animation-wrapper">
+
+<div id="animation-wrapper">
 	<svg id="animation" width="972" height="107" viewBox="0 0 972 107" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M52.344 4.8C57.816 4.8 62.52 5.61599 66.456 7.24799C70.392 8.78399 73.608 10.896 76.104 13.584C78.696 16.176 80.568 19.248 81.72 22.8C82.968 26.352 83.592 30.048 83.592 33.888C83.592 37.536 83.016 41.184 81.864 44.832C80.808 48.48 79.032 51.744 76.536 54.624C74.04 57.504 70.776 59.856 66.744 61.68C62.808 63.504 58.008 64.416 52.344 64.416H22.104C20.472 64.416 19.656 65.232 19.656 66.864V102H2.66402V63.552C2.66402 58.08 3.86402 54.144 6.26402 51.744C8.66402 49.344 12.552 48.144 17.928 48.144H52.92C55.32 48.144 57.384 47.76 59.112 46.992C60.84 46.224 62.232 45.216 63.288 43.968C64.344 42.72 65.112 41.328 65.592 39.792C66.168 38.16 66.456 36.48 66.456 34.752C66.456 31.2 65.352 28.176 63.144 25.68C61.032 23.088 57.672 21.792 53.064 21.792H2.52002V4.8H52.344Z" stroke="#00c3ff" stroke-width="5"/>
 		<path d="M117.534 4.8V44.4H167.214V4.8H184.35V102H167.214V61.392H117.534V102H100.542V4.8H117.534Z" stroke="#00c3ff" stroke-width="5"/>
@@ -26,106 +27,132 @@
 </div>
 
 <header>
-	<nav>
-		<ul>
-			<li><a href="#top">Home</a></li>
-			<li><a href="#education">Education</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#projects">Projects</a></li>
-		</ul>
+	<nav id="navbar">
+		<a id="nav-item" href="#top">About Me</a>
+		<a id="nav-item" href="#education">Education</a>
+		<a id="nav-item" href="#skills">Skills</a>
+		<a id="nav-item" href="#projects">Projects</a>
 	</nav>
 </header>
 
+<h1 id="welcome">Welcome!</h1>
 
-
-<section class="flexbox-container" id="home">
-	<img src="images/linkedinphoto.jpg" width="250" height="250">
-	<div class="details">
-		<h1>Philip Bolin</h1>
-		<h3>Software Engineer</h3>
+<section class="section-wrapper" id="about-me">
+	<div class="flexbox-container">
+		<figure>	
+			<img src="images/linkedinphoto.jpg" id="profile-pic" width="250" height="250">
+			<figcaption>
+				<h2>Philip Bolin</h1>
+				<h3>Software Engineer</h3>
+			</figcaption>
+		</figure>
+		<div id="about-me-details">
+			<h2>About Me</h2>
+			<p>
+				Hello and welcome to my website! My name is Philip Bolin and I'm a
+				software developer based in Los Angeles. I love developing applications
+				and games and have a knack for solving problems.
+			</p>
+		</div>
 	</div>
 </section>
 
 
-<section class="flexbox-container" id="education">
-	<img src="images/csun.png" width="250" height="250">
-	<div class="details">
-		<h2>Education</h2>
-		<p>California State University, Northridge</p>
-		<p>B.S. in Computer Science - May 2020</p>
-		<p><em>Cum Laude</em> - 3.7 GPA</p>
+<section class="section-wrapper" id="education">
+	<div class="flexbox-container">
+		<div id="education-details">
+			<h2>Education</h2>
+			<p>California State University, Northridge</p>
+			<p>B.S. in Computer Science - May 2020</p>
+			<p><em>Cum Laude</em> - 3.7 GPA</p>
+		</div>
+		<img src="images/csun.png" height="250">
 	</div>
 </section>
 
 
-<section id="skills">
+<section class="section-wrapper" id="skills">
 	<h2>Skills</h2>
-	<div class="iconlist">
-		<figure>
-			<img src="images/icons/python.png" class="icon">
-			<figcaption>Python</figcaption>
-		</figure>
-		<figure>
-			<img src="images/icons/sql.png" class="icon">
-			<figcaption>SQL</figcaption>
-		</figure>
-		<figure>
-			<img src="images/icons/java.png" class="icon">
-			<figcaption>Java</figcaption>
-		</figure>
-		<figure>
-			<img src="images/icons/unity.png" class="icon">
-			<figcaption>Unity</figcaption>
-		</figure>
-		<figure>
-			<img src="images/icons/csharp.png" class="icon">
-			<figcaption>C#</figcaption>
-		</figure>
-		<figure>
-			<img src="images/icons/html5.png" class="icon">
-			<figcaption>HTML5</figcaption>
-		</figure>
-		<figure>
-			<img src="images/icons/css.png" class="icon">
-			<figcaption>CSS</figcaption>
-		</figure>
-		<figure>
-			<img src="images/icons/js.png" class="icon">
-			<figcaption>Javascript</figcaption>
-		</figure>
-	</div>
+	<ul class="skillslist">
+		<li id="skill">
+			<figure>
+				<img src="images/icons/python.png" class="icon">
+				<figcaption>Python</figcaption>
+			</figure>
+		</li>
+		<li id="skill"> 
+			<figure>
+				<img src="images/icons/sql.png" class="icon">
+				<figcaption>SQL</figcaption>
+			</figure>
+		</li>
+		<li id="skill">
+			<figure>
+				<img src="images/icons/java.png" class="icon">
+				<figcaption>Java</figcaption>
+			</figure>
+		</li>
+		<li id="skill">
+			<figure>
+				<img src="images/icons/unity.png" class="icon">
+				<figcaption>Unity</figcaption>
+			</figure>
+		</li>
+		<li id="skill">
+			<figure>
+				<img src="images/icons/csharp.png" class="icon">
+				<figcaption>C#</figcaption>
+			</figure>
+		</li>
+		<li id="skill">
+			<figure>
+				<img src="images/icons/html5.png" class="icon">
+				<figcaption>HTML5</figcaption>
+			</figure>
+		</li>
+		<li id="skill">
+			<figure>
+				<img src="images/icons/css.png" class="icon">
+				<figcaption>CSS</figcaption>
+			</figure>
+		</li>
+		<li id="skill">
+			<figure>
+				<img src="images/icons/js.png" class="icon">
+				<figcaption>Javascript</figcaption>
+			</figure>
+		</li>
+	</ul>
 </section>
 
-
-<section id="projects">
+<section class="section-wrapper" id="projects">
 	<h2>Projects</h2>
-	<div class="flexbox-container" id="project1">
-		<img src="images/chungus.png">
-		<div class="details">
+	<div class="flexbox-container">
+		<img src="images/spaceshooter.png" width="250px" height="300px">
+		<div class="project-details">
 			<h3>Space Shooter Game</h3>
-			<ul>
-				<li>fdsa</li>
-				<li>afds</li>
-				<li>fdsa</li>
-				<li>fdsa</li>
-			</ul>
+			<p>Three friends and I put our minds together to create our interpretation of a classic, acrade-style Space Shooter. I was the head of the gameplay development which included
+				creating player and enemy movement and attack patterns.
+			</p>
 		</div>
 	</div>
-	<br>
-	<div class="flexbox-container" id="project2">
-		<img src="images/chungus.png">
-		<div class="details">
+	<div class="flexbox-container">
+		<iframe src="https://www.youtube.com/embed/LkdnHoxEEKc"></iframe>
+		<div class="project-details">
 			<h3>Basketball Predictions App</h3>
-			<ul>
-				<li>fdsa</li>
-				<li>fdas</li>
-				<li>fdsa</li>
-				<li>fdsa</li>
-			</ul>
+			<p>This was my senior design project in collaboration with 4 classmates. The app displays numerous NBA statistics as well as predictions for future basketball games.
+
+			</p>
+		</div>
+	</div>
+	<div class="flexbox-container">
+		<img src="images/chungus.png">
+		<div class="project-details">
+			<h3>Flappy Fish</h3>
+			<p>ya</p>
 		</div>
 	</div>
 </section>
-
 
 <footer>
 	<ul>
@@ -135,7 +162,6 @@
 	</ul>
 </footer>
 
-<script src="app.js"></script>
 </body>
-
+<script src="app.js"></script>
 </html>

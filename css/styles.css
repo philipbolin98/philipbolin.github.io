@@ -5,19 +5,29 @@
   	box-sizing: border-box;
 }
 
+@font-face{
+	font-family: "Nasalization";
+	src: url(fonts/nasalization-rg.ttf);
+}
+
 body{
 	text-align: center;
-	background-color: black;
+	background-color: rgb(9, 28, 70);
 	font-family: "Courier New", monospace;
 	color: #76eaff;
 	width: 100%;
 	height: 100vh;
+	overflow: hidden;
 }
 
-.animation-wrapper{
+ul{
+	list-style: none;
+}
+
+#animation-wrapper{
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	z-index: 5;
 	top: 0%;
 	left: 0%;
@@ -34,6 +44,15 @@ body{
 	position: relative;
 	width: 80%;
 	animation: fill .5s ease forwards 4s, shrink .5s ease-in forwards 5s;
+}
+
+@keyframes fill{
+	from{
+		fill: transparent;
+	}
+	to{
+		fill: #00c3ff;
+	}
 }
 
 @keyframes shrink{
@@ -120,101 +139,129 @@ body{
 	}
 }
 
-@keyframes fill{
-	from{
-		fill: transparent;
-	}
-	to{
-		fill: #00c3ff;
-	}
-}
-
-header{
+#navbar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
 	top: 0;
 	width: 100%;
 	position: fixed;
-	background-color: SkyBlue;
+	background-color: rgb(6, 93, 99);
+	transition: top .15s linear;
 }
 
-footer{
-	background-color: SkyBlue;
-}
-
-ul{
-	list-style: none;
-}
-
-nav li, footer li{
-	display: inline-block;
-	margin: 1em;
-}
-
-nav a{
+#nav-item{
+	color: #76eaff;
+	padding: 10px;
+	margin: 20px;
+	border: 1px solid;
+	border-radius: 5px;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
+@keyframes pulsate{
+	0%{
+		filter: drop-shadow(0px 0px 0px rgba(255,255,255,0));
+	}
+	50%{
+		filter: drop-shadow(0px 0px 15px rgba(255,255,255,1));
+	}
+	100%{
+		filter: drop-shadow(0px 0px 0px rgba(255,255,255,0));
+	}
+}
+
+#welcome{
+	font-family: "Nasalization";
+	font-size: 6em;
+	margin: 200px 0;
+	animation: pulsate 4s ease-in-out 6s infinite;
+}
+
+#profile-pic{
+	border-radius: 10px;
+}
+
+.section-wrapper{
+	width: 80%;
+	max-width: 800px;
+	padding: 20px;
+	margin: 200px auto;
+	border: 1px solid #76eaff;
+	border-radius: 10px;
+}
+
 .flexbox-container{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
-	flex-wrap: wrap;
 }
 
-.flexbox-container img{
-	margin-left: 0;
+#about-me-details, .project-details{
+	text-align: right;
 }
 
-.iconlist{
+#education-details{
+	text-align: left;
+}
+
+h2{
+	font-size: 2em;
+	padding: 10px 0px;
+}
+
+.skillslist{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
-#home{
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
-
-#education{
-	padding: 100px 0;
-}
-
-#skills{
-	padding: 100px 0;
-}
-
-#projects{
-	padding: 100px 0;
-}
-
-#skills figure{
-	width: 110px;
-	height: 110px;
-	border-style: outset;
-	border-width: medium;
+#skill{
+	background-color: rgba(12, 80, 85, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 7em;
+	height: 7em;
+	border: 1px solid #76eaff;
+	border-radius: 10px;
 	margin: 10px;
 }
 
-#skills img{
-	margin-top: 11px;
-}
-
-#skills figcaption{
+#skill figcaption{
 	padding: 5px 0px;
 }
 
-#skills .icon{
-	width: 50px;
-	height: 50px;
+#skill .icon{
+	width: 3em;
+	height: 3em;
+}
+
+#skill:hover{
+	transform: scale(1.2);
+	filter: drop-shadow(0px 0px 15px rgba(255,255,255,1));
+}
+
+
+
+
+#projects div{
+	margin: 20px;
+}
+
+footer{
+	background-color: rgba(12, 80, 85, 0.5);
+}
+
+footer li{
+	display: inline-block;
+	margin: 1em;
 }
 
 footer .icon{
-	width: 30px;
-	height: 30px;
-}
-
-#skills figure:hover{
-	background-color: grey;
+	width: 2em;
+	height: 2em;
 }
